@@ -1,0 +1,262 @@
+﻿.fieldset-crear {
+    color: #FA5100;
+    background-color: #242423;
+    border-radius: 1rem;
+    border: 1px solid #FA5100;
+    margin: 0 auto;
+}
+
+.login {
+    background-image: url(/imagenes/Login.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.formulario-login {
+    height: 50vh;
+}
+
+    .formulario-login label {
+        color: #ffff;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+    }
+
+.input-login {
+    font-size: 2rem;
+}
+
+.fieldset-login {
+    color: #FA5100;
+    background-color: #242423;
+    border-radius: 1rem;
+    border: 1px solid #FA5100;
+    margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+    .fieldset-login {
+        margin: 1rem 5rem 0 5rem;
+    }
+}
+
+.formulario-crear {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.fieldset-crear {
+    text-align: center;
+}
+
+.crear-cuenta {
+    background-image: url(/imagenes/Crear.jpg);
+}
+
+/*logeado*/
+
+.login-subtitulo {
+    background: #480ca8;
+    background: linear-gradient(149deg, #480ca8 0%, #090979 34%, #ff0068 100%);
+    color: var(--blanco);
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+    padding: 1rem;
+}
+
+@media (min-width: 768px) {
+    .login-subtitulo {
+        font-size: 4rem;
+    }
+}
+
+.login-informacion p {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .login-informacion p {
+        margin-top: 2rem;
+        font-size: 2rem;
+    }
+}
+
+.informacion-cuenta {
+    background-color: var(--blanco);
+    border: 0.5rem solid var(--negro);
+}
+
+@media (min-width: 768px) {
+    .informacion-cuenta {
+        margin: 0 5rem;
+        border-radius: 1rem;
+    }
+}
+
+.login-campo {
+    color: var(--negro);
+    text-transform: uppercase;
+    margin: 2rem 0.4rem 2rem 2rem;
+    font-weight: bolder;
+}
+
+.login-texto {
+    color: var(--naranja);
+    font-weight: bold;
+}
+
+
+.login-boton {
+    border: none;
+    padding: 0.8rem;
+    margin: 1rem 0 1rem 1rem;
+    transition: padding 0.2s ease-in;
+    width: 40%;
+}
+
+@media (min-width: 768px) {
+    .login-boton {
+        border: none;
+        padding: 1rem;
+        margin: 2rem;
+        transition: padding 0.2s ease-in;
+        width: 20%;
+    }
+}
+
+.login-boton:hover {
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .login-boton:hover {
+        padding: 2rem;
+    }
+}
+
+.login-borrar {
+    background-color: var(--rojo);
+}
+
+.login-editar {
+    background-color: var(--azul);
+}
+
+.login-boton a {
+    color: var(--blanco);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*editar*/
+
+.editar-subtitulo {
+    background: #480ca8;
+    background: linear-gradient(149deg, #480ca8 0%, #090979 34%, #ff0068 100%);
+    color: var(--blanco);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0 0 2rem 0;
+    padding: 1rem;
+    text-align: center;
+}
+
+.editar-informacion {
+    margin: 2rem;
+}
+
+.editar-campo {
+    margin-left: 2rem;
+}
+
+.editar-label {
+    color: var(--naranja);
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.boton {
+    color: var(--blanco);
+    margin: 2rem 0 0 0;
+    border: none;
+    padding: 0.8rem;
+    transition: padding 0.2s ease-in;
+    width: 45%;
+}
+
+@media(min-width:768px) {
+    .boton {
+        width: 25%;
+    }
+}
+
+.boton:hover {
+    padding: 1.5rem;
+}
+
+.editar {
+    background-color: var(--azul);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.volver {
+    background-color: var(--violeta);
+    margin-left: 2rem;
+    text-align: center;
+}
+
+    .volver a {
+        color: var(--blanco);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+/*borrar*/
+
+.borrar-subbtitulo {
+    color: var(--naranja);
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+@media(min-width:768px) {
+    .borrar-subbtitulo {
+        font-size: 3rem;
+    }
+}
+
+.borrar-email {
+    color: var(--rosa);
+    font-style: italic;
+}
+
+.eliminar {
+    background-color: var(--rojo);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 4rem;
+}
+
+.eliminar-volver {
+    background-color: var(--violeta);
+    margin-left: 2rem;
+    text-align: center;
+    margin: 2rem 0 2rem 4rem;
+}
+
+    .eliminar-volver a {
+        color: var(--blanco);
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }

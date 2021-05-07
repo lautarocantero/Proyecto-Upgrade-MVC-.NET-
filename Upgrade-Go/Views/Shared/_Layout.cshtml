@@ -1,0 +1,85 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Upgrade</title>
+    @Styles.Render("~/Content/armar.css")
+    @Styles.Render("~/Content/ayuda.css")
+    @Styles.Render("~/Content/variables.css")
+    @Styles.Render("~/Content/mis_estilos.css")
+    @Styles.Render("~/Content/login.css")
+    @Styles.Render("~/Content/carrito.css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="~/css/styles.css" />
+    <link rel="stylesheet" href="~/css/carrito.css" />
+    <script type="text/javascript" src="~/Scripts/armar.js"></script>
+
+</head>
+<body>
+    <header>
+        <div class="header">
+            <h1 class="titulo">Upgrade</h1>
+            <div class="barra">
+                <nav class="navegacion">
+                    <ul class="navegacion-principal">
+                        <li class="pagina">
+                            @Html.ActionLink("INICIO", "Inicio", "Productos")
+                        </li>
+                        <li class="pagina">
+                            @Html.ActionLink("ARMA TU PC", "Armar", "Productos")
+                        </li>
+                        <li class="pagina">
+                            @Html.ActionLink("MI CARRITO", "Compra", "Session")
+                        </li>
+                        <li class="pagina">
+                            @Html.ActionLink("MI CUENTA", "Cuenta", "Usuarios")
+                        </li>
+                        <li class="pagina">
+                            @Html.ActionLink("AYUDA", "Ayuda", "Usuarios")
+                        </li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="pagina">
+                                @Html.ActionLink("CERRAR SESION", "Logout", "Usuarios")
+                            </li>
+                        }
+
+
+                    </ul>
+
+                </nav>
+            </div>
+        </div>
+        @*<div class="hero"></div>*@
+        <img src="~/Imagenes/hero-1.jpg" />
+    </header>
+    <main role="main">
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        &copy Lautaro Cantero FreeLancer
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/js/site.js"></script>
+    <script src="https://kit.fontawesome.com/8206a300c4.js" crossorigin="anonymous"></script>
+    <script src="~/js/productos.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/productos")
+    @Scripts.Render("~/bundles/armar")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+
+

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upgrade-Go", "Upgrade-Go\Upgrade-Go.csproj", "{59F0ECD4-E214-4428-9809-4E4F98957775}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{59F0ECD4-E214-4428-9809-4E4F98957775}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F0ECD4-E214-4428-9809-4E4F98957775}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F0ECD4-E214-4428-9809-4E4F98957775}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F0ECD4-E214-4428-9809-4E4F98957775}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7513CE5A-C7E7-4454-8068-33C5CD12D2B2}
+	EndGlobalSection
+EndGlobal

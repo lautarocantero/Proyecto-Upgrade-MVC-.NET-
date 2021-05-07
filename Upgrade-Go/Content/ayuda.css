@@ -1,0 +1,25 @@
+﻿/*USUARIOS-AYUDA*/
+
+.preguntas-frecuentes {
+    padding: 3rem;
+    background-color: #242423;
+}
+
+    .preguntas-frecuentes p,
+    .preguntas-frecuentes h2 {
+        color: #ffff;
+    }
+
+.preguntas-titulo {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.5px solid black;
+}
+
+.pregunta {
+    margin-top: 2rem;
+}
+
+.frecuente {
+    color: #F53766;
+}

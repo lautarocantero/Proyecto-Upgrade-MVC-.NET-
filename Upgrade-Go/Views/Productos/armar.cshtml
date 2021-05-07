@@ -1,0 +1,135 @@
+﻿@model IEnumerable<Upgrade_Go.Models.Productos>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Title = "inicio";
+}
+
+
+<div class="armar-equipo">
+    <div class="componentes">
+        <div class="armar-contenedor aur"><p>Auriculares</p></div>
+        <div class="armar-contenedor mon"><p>Monitor</p></div>
+        <div class="armar-contenedor tec"><p>Teclado</p></div>
+        <div class="armar-contenedor mou"><p>Mouse</p></div>
+        <div class="armar-contenedor ram"><p>Ram</p></div>
+        <div class="armar-contenedor dis"><p>Disco duro</p></div>
+    </div>
+</div>
+<div class="seleccion-equipo">
+
+    <form action="/Session/Pack" method="POST" class="formulario-equipo">
+
+        <fieldset class="armar-fieldset">
+            <legend>Componentes</legend>
+            <div class="componentes-campos">
+                <label for="auriculares">
+                    Auriculares
+                </label>
+                <select name="Auriculares" id="auriculares">
+                    <option value="seleccionar" disabled selected>seleccionar</option>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            if (item.Tipo == "auricular")
+                            {
+                                <option value="@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.Titulo)</option>
+                            }
+
+                        }
+                    }
+
+                </select>
+
+                <label for="Monitor">
+                    Monitor
+                </label>
+                <select name="Monitor" id="monitor">
+                    <option value="seleccionar" disabled selected>seleccionar</option>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            if (item.Tipo == "monitor")
+                            {
+                                <option value="@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.Titulo)</option>
+                            }
+
+                        }
+                    }
+                </select>
+
+                <label for="Teclado">
+                    Teclado
+                </label>
+                <select name="Teclado" id="teclado">
+                    <option value="seleccionar" disabled selected>seleccionar</option>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            if (item.Tipo == "teclado")
+                            {
+                                <option value="@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.Titulo)</option>
+                            }
+
+                        }
+                    }
+                </select>
+
+                <label for="Mouse">
+                    Mouse
+                </label>
+                <select name="Mouse" id="mouse">
+                    <option value="seleccionar" disabled selected>seleccionar</option>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            if (item.Tipo == "mouse")
+                            {
+                                <option value="@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.Titulo)</option>
+                            }
+
+                        }
+                    }
+                </select>
+
+                <label for="Ram">
+                    Ram
+                </label>
+                <select name="Ram" id="ram">
+                    <option value="seleccionar" disabled selected>seleccionar</option>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            if (item.Tipo == "memoria")
+                            {
+                                <option value="@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.Titulo)</option>
+                            }
+
+                        }
+                    }
+                </select>
+
+                <label for="DiscoDuro">
+                    Disco_Duro
+                </label>
+                <select name="DiscoDuro" id="discoduro">
+                    <option value="seleccionar" disabled selected>seleccionar</option>
+                    @{
+                        foreach (var item in Model)
+                        {
+                            if (item.Tipo == "discoduro")
+                            {
+                                <option value="@Html.DisplayFor(modelItem => item.Id)">@Html.DisplayFor(modelItem => item.Titulo)</option>
+                            }
+
+                        }
+                    }
+                </select>
+            </div>
+        </fieldset>
+        <input type="submit" class="botonCatalogo" value="Armar Juego" />
+
+    </form>
+
+</div>
+@Scripts.Render("~/bundles/armar")

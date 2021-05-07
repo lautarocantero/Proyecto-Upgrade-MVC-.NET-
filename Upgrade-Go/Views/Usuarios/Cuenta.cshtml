@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Upgrade_Go.Models.Usuarios>
+
+<div class="cointainer">
+
+
+    <div class="login">
+
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            var emailUsuario = ViewBag.email;
+
+            if (Session["Usuario"] != null)
+            {
+
+                foreach (var item in Model)
+                {
+                    if (item.Mail == emailUsuario)
+                    {
+                        <div class="informacion-cuenta">
+
+                            <h2 class="login-subtitulo">Datos de mi Cuenta</h2>
+
+                            <div class="login-informacion">
+                                <p><span class="login-campo">E-Mail:</span><span class="login-texto">@Html.DisplayFor(modelItem => item.Mail)</span></p>
+                                <p><span class="login-campo">Nombre:</span><span class="login-texto"> @Html.DisplayFor(modelItem => item.Nombre)  </span> </p>
+                                <p><span class="login-campo">Fecha de Cumpleaños:</span><span class="login-texto">@Html.DisplayFor(modelItem => item.Cumpleaños) </span>  </p>
+                                <p><span class="login-campo">DNI:</span><span class="login-texto">@Html.DisplayFor(modelItem => item.Dni)</span> </p>
+                                <p><span class="login-campo">Datos tarjeta de Credito:</span><span class="login-texto"> @Html.DisplayFor(modelItem => item.Tarjeta) </span></p>
+
+                                <div class="login-botones">
+                                    <button class="login-boton login-editar">@Html.ActionLink("Editar", "Edit", new { id = item.Id })</button>
+                                    <button class="login-boton login-borrar">@Html.ActionLink("Eliminar", "Delete", new { id = item.Id })</button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    }
+                }
+
+            }
+
+        }
+        else
+        {
+
+            <form action="/Usuarios/Login" method="post" class="formulario-login">
+                <fieldset class="fieldset-login">
+                    <legend>Iniciar Sesion</legend>
+                    <div class="componentes-campos">
+                        <label class="label-login">Ingresa tu email</label>
+                        <input class="input-login" type="text" name="email" value="" />
+                    </div>
+
+                    <div class="componentes-campos">
+                        <label class="label-login">Ingresa tu contraseña</label>
+                        <input class="input-login" type="password" name="contrasena" value="" />
+                    </div>
+                    <input type="submit" class="botonCatalogo" value="Iniciar Sesion" />
+                    <p><strong>No tienes cuenta?</strong> @Html.ActionLink("Crea una", "Create", "Usuarios") </p>
+                </fieldset>
+            </form>
+
+        }
+
+
+    </div>
+
+</div>

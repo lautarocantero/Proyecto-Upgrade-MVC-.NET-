@@ -1,0 +1,137 @@
+﻿
+.carrito-subtitulo {
+    color: red;
+    text-align: center;
+    margin: 2rem 0 2rem 0;
+}
+
+.carrito table {
+    margin: 3rem auto;
+}
+
+.articulos-carrito p {
+    text-align: center;
+}
+
+/*mi carrito*/
+
+.articulo_subtitulo {
+    background-color: #FA5100;
+    color: #ffff;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.articulos-carrito {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0 0 0;
+}
+
+@media(min-width:768px) {
+    .articulos-carrito {
+        margin: 2rem;
+    }
+}
+
+.articulos-carrito p {
+    font-size: 1rem;
+}
+
+@media(min-width:768px) {
+    .articulos-carrito p {
+        font-size: 2rem;
+    }
+}
+
+.carrito_imagen {
+    height: 10rem;
+    width: 10rem;
+}
+
+.lista-carrito tr {
+    border-bottom: 1px solid #0D101F;
+}
+
+.boton-comprar {
+    position: relative;
+    height: 13vh;
+    background-color: #242423;
+}
+
+@media(min-width:768px) {
+    .boton-comprar {
+        position: relative;
+        height: 18vh;
+        background-color: #242423;
+    }
+}
+
+.comprar {
+    background-color: #FA5100;
+    border: none;
+    border-radius: 1rem;
+    color: #ffff;
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out 0s;
+    margin: 2rem auto;
+    position: absolute;
+    right: 5rem;
+}
+
+@media(min-width:768px) {
+    .comprar {
+        font-size: 2rem;
+        padding: 2rem;
+    }
+}
+
+.compra a {
+    color: var(--blanco);
+}
+
+.borrar {
+    background-color: #FA5100;
+    border: none;
+    border-radius: 1rem;
+    color: #ffff;
+    display: block;
+    font-size: 2rem;
+    padding: 1rem;
+    transition: all 0.2s ease-in-out 0s;
+    margin: 2rem 15rem 0 0;
+    position: absolute;
+    right: 5rem;
+}
+
+    .borrar a {
+        color: var(--blanco);
+    }
+
+@media(min-width:768px) {
+    .borrar {
+        font-size: 2rem;
+        padding: 2rem;
+        margin: 2rem 20rem 0 0;
+    }
+}
+
+.compra-subtitulo {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.lista-carrito th {
+    padding: 0;
+}
+
+.Cuenta {
+    color: var(--rosa);
+    font-weight: bolder;
+}

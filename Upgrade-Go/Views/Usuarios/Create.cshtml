@@ -1,0 +1,47 @@
+﻿@model Upgrade_Go.Models.Usuarios
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal crear-cuenta">
+        <hr />
+        <fieldset class="fieldset-crear">
+            <legend>Crear Cuenta</legend>
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group formulario-crear">
+                @Html.LabelFor(model => model.Mail, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Mail, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Mail, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group  formulario-crear">
+                @Html.LabelFor(model => model.Nombre, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Nombre, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Nombre, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group  formulario-crear">
+                @Html.LabelFor(model => model.Contraseña, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.Contraseña, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.Contraseña, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Crear" class="botonCatalogo" />
+                </div>
+            </div>
+            <p><strong>@Html.ActionLink("Volver", "Cuenta", "Home") </strong></p>
+        </fieldset>
+    </div>
+}

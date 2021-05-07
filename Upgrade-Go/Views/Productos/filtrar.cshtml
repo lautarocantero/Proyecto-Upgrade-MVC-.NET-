@@ -1,0 +1,83 @@
+﻿@model IEnumerable<Upgrade_Go.Models.Productos>
+
+@{
+    ViewData["Title"] = "Index";
+    ViewBag.Title = "inicio";
+}
+
+
+<div class="barra-secundaria">
+
+    <div class="informacion">
+        <h2 class="subtitulo">Nuestros productos</h2>
+        <div class="buscador">
+
+            <form method="get" action="~/Productos/filtrar">
+                <label for="variedad">
+                    Filtrar <i class="fas fa-search"></i>
+                </label>
+                <select name="tipo" id="variedad">
+                    <option value="todo">Todo</option>
+                    <option value="monitor">Monitor</option>
+                    <option value="auricular">Auricular</option>
+                    <option value="teclado">Teclado</option>
+                    <option value="mouse">Mouse</option>
+                    <option value="memoria">Memoria</option>
+                    <option value="discoduro">Disco</option>
+                </select>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="video">
+        <video class="video_buscador" controls autoplay muted loop>
+            <source src="/imagenes/vertical_glowing_final.mp4" type="video/mp4">
+            <source src="/imagenes/vertical_glowing_final.ogg" type="video/ogg">
+            <source src="/imagenes/vertical_glowing_final.webm" type="video/webm">
+        </video>
+    </div>
+
+
+
+</div>
+
+<main class="main">
+
+    <div id="expositorio" class="expositorio">
+
+        @foreach (var item in Model)
+        {
+            if (@ViewBag.tipo == "todo")
+            {
+                <div class="producto">
+                    <div class="producto-imagen">
+                        <img src="@Url.Action("getImage","Productos",new { id=item.Id } )" ) />
+                    </div>
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">@Html.DisplayFor(modelItem => item.Titulo)</p>
+                        <p class="producto_precio">$@Html.DisplayFor(modelItem => item.Precio)</p>
+                    </div>
+                    <button class="botonCarrito agregarCarrito" data-id="1">Agregar al Carrito <i class="fas fa-shopping-cart carrito agregarCarrito"></i> </button>
+                </div> <!--FIN DEL PRODUCTO-->
+
+            }
+            if (item.Tipo == @ViewBag.tipo)
+            {
+                <div class="producto">
+                    <div class="producto-imagen">
+                        <img src="@Url.Action("getImage","Productos",new { id=item.Id } )" ) />
+                    </div>
+                    <div class="producto_informacion">
+                        <p class="producto_nombre">@Html.DisplayFor(modelItem => item.Titulo)</p>
+                        <p class="producto_precio">$@Html.DisplayFor(modelItem => item.Precio)</p>
+                    </div>
+                    <button class="botonCarrito agregarCarrito" data-id="1">Agregar al Carrito <i class="fas fa-shopping-cart carrito agregarCarrito"></i> </button>
+                </div> <!--FIN DEL PRODUCTO-->
+
+            }
+        }
+
+    </div>
+</main>
+
